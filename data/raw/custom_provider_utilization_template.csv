@@ -1,0 +1,7 @@
+provider_id,provider_name,specialty_group,provider_type,state_code,market,beneficiary_count,service_count,medicare_payment_amount,allowed_amount,quality_score,readmission_rate,aco_name,aco_quality_score,aco_savings_rate
+P1001,Northstar Primary Care,Primary care,Professional,TX,Dallas,820,4100,742000,905000,91,0.07,Northstar ACO,94,0.032
+P1002,Lakeside Orthopedics,Orthopedics,Professional,FL,Tampa,430,1620,1220000,1480000,78,0.10,Suncoast ACO,86,0.011
+P1003,Metro Heart Group,Cardiology,Professional,CA,Los Angeles,610,2950,1530000,1810000,84,0.13,Pacific Value Partners,91,0.025
+P1004,Valley Hospital,Facility,Hospital,NY,Hudson Valley,2200,7800,6250000,7100000,72,0.17,Hudson Integrated ACO,82,-0.014
+P1005,Precision Imaging Associates,Radiology,Professional,OH,Columbus,950,5300,980000,1120000,88,0.06,Central Care ACO,89,0.018
+
