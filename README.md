@@ -3,9 +3,9 @@
 
 Provider Network Performance & Value-Based Care Analytics Platform is a production-ready healthcare analytics portfolio project that simulates how payer network, ACO, contracting, and value-based care teams evaluate providers across cost, quality, utilization, readmissions, market context, and shared savings performance.
 
-[Live GitHub Pages App](https://mohammed-ghanim-siddiqui.github.io/provider-network-value-based-care-analytics/) | [GitHub Repository](https://github.com/MOHAMMED-GHANIM-SIDDIQUI/provider-network-value-based-care-analytics) | [Deployment Workflow](https://github.com/MOHAMMED-GHANIM-SIDDIQUI/provider-network-value-based-care-analytics/actions/workflows/deploy-pages.yml)
+[Live GitHub Pages App](https://birjung.github.io/provider-network-value-based-care-analytics/) | [GitHub Repository](https://github.com/BIRJUNG/provider-network-value-based-care-analytics) | [Deployment Workflow](https://github.com/BIRJUNG/provider-network-value-based-care-analytics/actions/workflows/deploy-pages.yml)
 
-![Deploy provider network value-based care dashboard](https://github.com/MOHAMMED-GHANIM-SIDDIQUI/provider-network-value-based-care-analytics/actions/workflows/deploy-pages.yml/badge.svg)
+![Deploy provider network value-based care dashboard](https://github.com/BIRJUNG/provider-network-value-based-care-analytics/actions/workflows/deploy-pages.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![pandas](https://img.shields.io/badge/pandas-Provider%20Analytics-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-Outlier%20Scoring-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
@@ -45,9 +45,9 @@ If you use custom data, do not commit confidential payer/provider contracts, PHI
 
 | Resource | Link |
 |---|---|
-| Live app | https://mohammed-ghanim-siddiqui.github.io/provider-network-value-based-care-analytics/ |
-| Repository | https://github.com/MOHAMMED-GHANIM-SIDDIQUI/provider-network-value-based-care-analytics |
-| Deployment workflow | https://github.com/MOHAMMED-GHANIM-SIDDIQUI/provider-network-value-based-care-analytics/actions/workflows/deploy-pages.yml |
+| Live app | https://birjung.github.io/provider-network-value-based-care-analytics/ |
+| Repository | https://github.com/BIRJUNG/provider-network-value-based-care-analytics |
+| Deployment workflow | https://github.com/BIRJUNG/provider-network-value-based-care-analytics/actions/workflows/deploy-pages.yml |
 | Blueprint | [docs/Provider_Network_Value_Based_Care_Analytics_Blueprint.md](docs/Provider_Network_Value_Based_Care_Analytics_Blueprint.md) |
 
 ---
@@ -186,7 +186,7 @@ provider-network-value-based-care-analytics/
 ## Getting Started
 
 ```powershell
-git clone https://github.com/MOHAMMED-GHANIM-SIDDIQUI/provider-network-value-based-care-analytics.git
+git clone https://github.com/BIRJUNG/provider-network-value-based-care-analytics.git
 cd provider-network-value-based-care-analytics
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -286,7 +286,7 @@ The GitHub Actions workflow installs dependencies, builds the dashboard, runs te
 Live app:
 
 ```text
-https://mohammed-ghanim-siddiqui.github.io/provider-network-value-based-care-analytics/
+https://birjung.github.io/provider-network-value-based-care-analytics/
 ```
 
 ---
@@ -306,7 +306,7 @@ https://mohammed-ghanim-siddiqui.github.io/provider-network-value-based-care-ana
 
 ## Author
 
-Built by [MOHAMMED-GHANIM-SIDDIQUI](https://github.com/MOHAMMED-GHANIM-SIDDIQUI).
+Built by [Birjung Thapa](https://github.com/BIRJUNG).
 
 This project demonstrates provider network analytics, value-based care strategy, ACO performance analysis, hospital quality benchmarking, market opportunity scoring, contracting recommendations, testing, UI design, and public deployment.
 
