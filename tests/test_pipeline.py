@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sqlite3
+import json
 
 from provider_network_analytics.config import PipelineConfig
 from provider_network_analytics.data_generation import generate_dataset
@@ -33,8 +34,12 @@ def test_end_to_end_pipeline_writes_outputs(tmp_path):
     assert config.sqlite_path.exists()
     assert config.dashboard_path.exists()
     assert config.summary_path.exists()
+    assert result["manifest_path"].exists()
     assert (config.data_processed_dir / "mart_provider_peer_benchmark.csv").exists()
     assert (config.data_processed_dir / "score_provider_anomaly.csv").exists()
+    manifest = json.loads(result["manifest_path"].read_text(encoding="utf-8"))
+    assert manifest["quality"]["status"] == "PASS"
+    assert manifest["record_counts"]["dim_provider"] == 140
 
     conn = sqlite3.connect(config.sqlite_path)
     try:

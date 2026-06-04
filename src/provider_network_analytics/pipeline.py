@@ -10,6 +10,7 @@ from .data_generation import generate_dataset
 from .documentation import write_model_card, write_project_docs
 from .marts import build_marts
 from .quality import run_quality_checks
+from .release import write_release_manifest
 from .reporting import render_dashboard, write_executive_summary
 from .scoring import score_network
 from .warehouse import ensure_output_dirs, export_csv_tables, write_sqlite_database
@@ -40,11 +41,13 @@ def run_pipeline(config: PipelineConfig) -> dict[str, object]:
     write_model_card(score_outputs, config.model_card_path)
     render_dashboard(base_tables, marts, score_outputs, quality_report, config.dashboard_path)
     write_executive_summary(base_tables, marts, score_outputs, quality_report, config.summary_path)
+    manifest_path = write_release_manifest(config, all_tables, quality_report, score_outputs)
     failures = int((quality_report["status"] == "FAIL").sum())
     return {
         "sqlite_path": config.sqlite_path,
         "dashboard_path": config.dashboard_path,
         "summary_path": config.summary_path,
+        "manifest_path": manifest_path,
         "quality_failures": failures,
         "table_count": len(all_tables),
         "provider_count": len(base_tables["dim_provider"]),
@@ -90,6 +93,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"SQLite warehouse: {result['sqlite_path']}")
     print(f"Dashboard: {result['dashboard_path']}")
     print(f"Executive summary: {result['summary_path']}")
+    print(f"Release manifest: {result['manifest_path']}")
     print(f"Quality failures: {result['quality_failures']}")
     if result["quality_failures"] and not args.allow_quality_failures:
         return 2

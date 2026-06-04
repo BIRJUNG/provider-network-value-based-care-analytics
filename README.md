@@ -261,6 +261,7 @@ data/raw/custom_provider_utilization_template.csv
 | Interactive dashboard | `reports/dashboard/provider_network_vbc_dashboard.html` |
 | Static web artifact | `dist/index.html` |
 | Executive summary | `reports/executive_summary.md` |
+| Release manifest | `reports/release_manifest.json` |
 | Quality report | `reports/data_quality_report.csv` |
 | Provider benchmark mart | `data/processed/mart_provider_peer_benchmark.csv` |
 | Contracting opportunity mart | `data/processed/mart_contracting_opportunity.csv` |
@@ -276,6 +277,8 @@ python -m pytest
 ```
 
 The test suite verifies synthetic data integrity, marts, scoring, warehouse output, dashboard rendering, and custom provider data ingestion.
+
+The pipeline also writes `reports/release_manifest.json`, a machine-readable handoff file with output paths, row counts, quality status, model metrics, and the expected GitHub Pages URL.
 
 ---
 
