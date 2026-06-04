@@ -35,11 +35,14 @@ def test_end_to_end_pipeline_writes_outputs(tmp_path):
     assert config.dashboard_path.exists()
     assert config.summary_path.exists()
     assert result["manifest_path"].exists()
+    assert result["sql_summary_path"].exists()
     assert (config.data_processed_dir / "mart_provider_peer_benchmark.csv").exists()
     assert (config.data_processed_dir / "score_provider_anomaly.csv").exists()
     manifest = json.loads(result["manifest_path"].read_text(encoding="utf-8"))
+    sql_summary = json.loads(result["sql_summary_path"].read_text(encoding="utf-8"))
     assert manifest["quality"]["status"] == "PASS"
     assert manifest["record_counts"]["dim_provider"] == 140
+    assert {item["name"] for item in sql_summary} >= {"provider_value_leaders", "market_network_gaps"}
 
     conn = sqlite3.connect(config.sqlite_path)
     try:

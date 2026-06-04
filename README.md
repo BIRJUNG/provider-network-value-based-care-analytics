@@ -175,6 +175,7 @@ provider-network-value-based-care-analytics/
 | Data | pandas, NumPy |
 | Scoring | scikit-learn, peer percentiles |
 | Warehouse | SQLite |
+| SQL analytics | Named SQL query pack in `sql/05_analytics/provider_network_value_queries.sql` |
 | Visuals | Plotly |
 | UI | HTML, CSS, JavaScript |
 | Tests | pytest |
@@ -279,6 +280,7 @@ python -m pytest
 The test suite verifies synthetic data integrity, marts, scoring, warehouse output, dashboard rendering, and custom provider data ingestion.
 
 The pipeline also writes `reports/release_manifest.json`, a machine-readable handoff file with output paths, row counts, quality status, model metrics, and the expected GitHub Pages URL.
+It also executes the SQL analytics pack and writes query outputs to `reports/sql_analytics/`, proving that the SQLite warehouse supports direct SQL investigation.
 
 ---
 
